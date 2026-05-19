@@ -1,0 +1,84 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .animate {
+        height: 200px;
+        width: 300px;
+        border: 1px solid;
+        border-radius: 10px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    h1::after {
+        content: "";
+        text-transform: capitalize;
+        font-size: 60px;
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(to right, rgba(79, 79, 238, 0.694), rgba(235, 33, 2, 0.689));
+        animation: text 5s 1s infinite step-end;
+    }
+    /*welcome*/
+    
+    span {
+        width: 2px;
+        font-size: 50px;
+        animation: blink 0.5s linear infinite;
+        font-size: 50px;
+        background-clip: text;
+        background-image: linear-gradient(to bottom, rgba(79, 79, 238, 0.694), rgba(235, 33, 2, 0.689));
+    }
+    
+    @keyframes blink {
+        0% {
+            opacity: 0;
+            transform: scaleY(0);
+        }
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+    
+    @keyframes text {
+        0% {
+            content: " ";
+        }
+        20% {
+            content: "w";
+        }
+        45% {
+            content: "we";
+        }
+        65% {
+            content: "wel";
+        }
+        75% {
+            content: "welc";
+        }
+        85% {
+            content: "welco";
+        }
+        95% {
+            content: "welcom";
+        }
+        100% {
+            content: "welcom e ";
+        }
+        110% {
+            content: "welcome . ";
+        }
+    }

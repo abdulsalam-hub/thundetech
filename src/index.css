@@ -1,0 +1,84 @@
+@import "tailwindcss";
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: #f3f4f6;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+::-webkit-scrollbar {
+    background-color: rgba(0, 0, 255, 0.5);
+    border: 1px rgb(149, 149, 155) solid;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #050404e4;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 255, 0.2);
+    max-height: 4px;
+    border-radius: 10px;
+    transition: 1.5s ease;
+    border: 1px solid #0d1011;
+    cursor: default;
+    z-index: -10px;
+}
+
+a:active {
+    color: blue;
+}
+
+a:visited {
+    font: bold;
+}
+
+@layer utilities {
+    @keyframes blink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+    .animate-blink {
+        animation: blink 0.5s step-end infinite;
+    }
+    @keyframes loading {
+        0% {
+            transform: translateX(-100%);
+            width: 150px;
+            height: 4px;
+            content: "thunde";
+            color: white;
+        }
+        100% {
+            transform: translateX(250%);
+            width: 80px;
+            height: 4px;
+            content: "thundetech";
+            color: white;
+            font-size: large;
+        }
+    }
+    .animate-loading-bar {
+        animation: loading 0.6s ease-out infinite;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

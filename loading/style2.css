@@ -1,0 +1,71 @@
+                                                                                                                                * {
+                                                                                                                                    box-sizing: border-box;
+                                                                                                                                    padding: 0;
+                                                                                                                                    margin: 0;
+                                                                                                                                    outline: 0;
+                                                                                                                                    align-items: center;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                body {
+                                                                                                                                    background-color: rgba(0, 0, 0, 0.8);
+                                                                                                                                    place-items: center;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .load-parent {
+                                                                                                                                    position: absolute;
+                                                                                                                                    top: 50%;
+                                                                                                                                    text-align: center;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .load {
+                                                                                                                                    text-align: center;
+                                                                                                                                    transition: 1s ease-in-out;
+                                                                                                                                    justify-content: center;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                span {
+                                                                                                                                    font: 30px tahoma;
+                                                                                                                                    color: white;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .first {
+                                                                                                                                    animation: one 4s infinite;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .two {
+                                                                                                                                    animation: sec 3s infinite;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                .three {
+                                                                                                                                    animation: thir 2s infinite;
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                @keyframes one {
+                                                                                                                                    0% {
+                                                                                                                                        transform: scale(1);
+                                                                                                                                    }
+                                                                                                                                    100% {
+                                                                                                                                        transform: scale(0.5);
+                                                                                                                                        color: red;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                @keyframes sec {
+                                                                                                                                    0% {
+                                                                                                                                        transform: scale(0);
+                                                                                                                                    }
+                                                                                                                                    100% {
+                                                                                                                                        transform: scale(1);
+                                                                                                                                        color: green;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                                
+                                                                                                                                @keyframes thir {
+                                                                                                                                    0% {
+                                                                                                                                        transform: scale(1);
+                                                                                                                                    }
+                                                                                                                                    100% {
+                                                                                                                                        transform: scale(0);
+                                                                                                                                        color: blue;
+                                                                                                                                    }
+                                                                                                                                }
