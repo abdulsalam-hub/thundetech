@@ -44,7 +44,7 @@ const ProjectBox=() =>
                      <button
                        onClick={() => handleShow(id)}
                        type="button"
-                       className="rounded-xl p-1   cursor-pointer text-blue-600 font-medium border border-slate-200 w-15 capitalize transition-colors "
+                       className="rounded-xl p-1  hover:bg-blue-400  cursor-pointer text-blue-600 font-medium  w-15 capitalize transition-colors "
                      >
                        more
                      </button>
@@ -55,7 +55,7 @@ const ProjectBox=() =>
                    Beautiful innovative project ideas that caught attentions
                    with designs scaling skills.
                  </p> */}
-                 <div className="w-full flex gap-x-2 flex-wrap gap-y-2  mt-3 items-center">
+                 <div className="w-full flex gap-x-2 flex-wrap gap-y-2 h-fit max-h-auto  mt-3 items-center transition duration-500 ease-in-out">
                    {project.tech.map((tech) => {
                      return (
                        <span
@@ -78,7 +78,7 @@ const ProjectBox=() =>
                      live demo↗
                    </a>
                    <a
-                     target="_self"
+                     target="_blank"
                      href={project.github}
                      className="text-blue-800 border rounded px-2 py-1.5 hover:text-gray-500  transition-colors"
                    >

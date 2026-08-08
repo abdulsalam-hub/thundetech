@@ -12,8 +12,9 @@ export const Loading=({onComplete}) =>
         let index=0;
         const interval=setInterval(() =>
         {
-          setText(fulltext.substring(0,index));
           index++;
+          setText(fulltext.substring(0,index));
+     
             if (index > fulltext.length) {
                 clearInterval(interval)
                 setTimeout(() => {
@@ -21,11 +22,11 @@ export const Loading=({onComplete}) =>
                 }, 700);
             }
         },200)
-        return ()=> clearInterval(interval)
+       
     },[onComplete])
   return (
     <>
-      <div className="fixed inset-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center">
+      <div className="h-screen w-full  z-50 bg-black text-gray-100 flex flex-col items-center justify-center">
         <div className="mb-4 text-4xl font-mono font-bold">
           {text} <span className="text-blue-400 animate-blink ml-1">|</span>
               </div>

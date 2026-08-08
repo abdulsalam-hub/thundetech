@@ -6,13 +6,14 @@ body {
     background: #0a0a0a;
     color: #f3f4f6;
     width: 100%;
-    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 ::-webkit-scrollbar {
     background-color: rgba(0, 0, 255, 0.5);
     border: 1px rgb(149, 149, 155) solid;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-button {
@@ -20,7 +21,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     max-height: 4px;
     border-radius: 10px;
     transition: 1.5s ease;
@@ -75,7 +76,7 @@ a:visited {
 .reveal {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.9s ease, transform 0.8s ease;
+    transition: opacity 0.3s ease, transform 0.1s ease;
 }
 
 .reveal.visible {

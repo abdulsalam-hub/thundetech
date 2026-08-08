@@ -2,11 +2,11 @@ import React from 'react'
 
 export const SkillBox = ({type,list}) => {
   return (
-   <div className="rounded-xl p-6 hover:-translate-y-1 transition-all shadow capitalize shadow-current">
+   <div className="rounded-xl p-6 hover:-translate-y-1  transition shadow-[2px_3px_8px_rgba(255,255,255,0.2)] capitalize my-2 md:mx-2">
                      <h3 className="text-xl text-gray-300 font-bold mb-4">
                        {type}
                      </h3>
-                     <div className="flex flex-wrap gap-2">
+                     <div className="flex flex-wrap gap-4 py-3">
                        {list.map((tech, key) => {
                          return (
                            <span
