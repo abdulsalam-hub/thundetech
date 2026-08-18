@@ -12,13 +12,15 @@ import {Service} from "./components/sections/Service.jsx";
 import Footer from "./components/sections/Footer.jsx";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isMenu, setIsMenu] = useState(true);
-
+  const [isMenu, setIsMenu] = useState(false);
+  if(isLoading) {
+    return <Loading onComplete={() => setIsLoading(false)} />;
+} 
   return (
     <>
-      {isLoading && <Loading onComplete={() => setIsLoading(false)} />}
+      
       <div
-        className={`min-h-screen transition-opacity duration-700 ${
+        className={`min-h-screen transition-opacity duration-700 relative ${
           !isLoading ? "opacity-100" : "opacity-0"
         } bg-black text-gray-100 scroll-smooth bg-scroll`}
       >

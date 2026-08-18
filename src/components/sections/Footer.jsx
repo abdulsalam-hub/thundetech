@@ -9,7 +9,7 @@ const Footer=() =>
       <>
         <div
           title="developer warmth page"
-          className=" w-full shadow-[4_2px_8px_rgba(59,130,246,0.4)] border-t-2 text-[rgb(255,255,255)] z-50 px-4 py-3 mt-20 bg-black-50"
+          className="relative w-full shadow-[4_2px_8px_rgba(59,130,246,0.4)] border-t-2 text-[rgb(255,255,255)] z-50 px-4 py-3 mt-20 bg-black-50"
         >
           <div className="text-center pb-2">
             <h5 className="text-justify bg-linear-to-r from-blue-500 to-gray-900 bg-clip-text text-transparent leading-right">
@@ -24,7 +24,7 @@ const Footer=() =>
               className="items-center flex flex-col "
             >
               <div className="z-40 flex gap-x-5 items-center my-5 justify-evenly self-center rounded-xl mx-auto border-blue-500 transition-all">
-                <a href="https://www.facebook.com/thundetech" target="self">
+                <a href="https://www.facebook.com/abdulsalamdevhub" target="self">
                   <img
                     src={face}
                     loading="lazy"

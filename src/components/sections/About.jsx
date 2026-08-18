@@ -12,7 +12,7 @@ export const About = () => {
       <section
         title="About page"
         id="about"
-        className="min-h-screen w-full  py-20"
+        className="min-h-screen w-full  py-20 md:mt-15 mt-5"
       >
         <Revalscroll>
           <div className="max-w-7xl mx-auto w-full  px-4">

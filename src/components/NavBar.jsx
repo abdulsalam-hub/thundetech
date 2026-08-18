@@ -4,12 +4,12 @@ export const NavBar=({isMenu,setIsMenu}) =>
 {
     useEffect(() =>
     {
-        document.body.style.overflow= isMenu ? "auto" : "hidden"
+        document.body.style.overflow= !isMenu ? "auto" : "hidden"
     },[isMenu])
     return (
       <>
-        <nav className="fixed top-0 left-0 w-full z-50 bg-[rgba(10,10,10,0.8)] backdrop-blur-lg border-b border-white  shadow-10">
-          <div className="max-w-5xl mx-auto px-4 ">
+        <nav className="fixed md:sticky top-0 left-0 w-full z-50 bg-[rgba(10,10,10,0.5)] backdrop-blur-xl border-b border-white  shadow-10">
+          <div className=" w-full max-w-5xl mx-auto px-4 ">
             <div className="flex justify-between items-center h-16">
               <a
                 href="#home"
@@ -17,13 +17,11 @@ export const NavBar=({isMenu,setIsMenu}) =>
               >
                 Thundetech_<span className="text-blue-500 ">hub</span>
               </a>
-              {isMenu ? (
+              {!isMenu ? (
                 <button
-                  className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
+                  className="w-7 h-5  relative cursor-pointer z-40 md:hidden"
                   onClick={() =>
-                    setIsMenu((prev) => {
-                      !prev;
-                    })
+                    setIsMenu(!isMenu)
                   }
                 >
                   &#9776;
@@ -31,9 +29,9 @@ export const NavBar=({isMenu,setIsMenu}) =>
               ) : (
                 <button
                   onClick={() => {
-                    setIsMenu(true);
+                    setIsMenu(!isMenu);
                   }}
-                  className=" text-white text-3xl focus:outline-none cursor-pointer bg-black-600"
+                  className="md:hidden text-white text-3xl focus:outline-none cursor-pointer bg-black-600"
                   aria-label="Close Menu"
                 >
                   &times;

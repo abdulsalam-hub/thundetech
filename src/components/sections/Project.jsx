@@ -10,7 +10,7 @@ export const Project=() =>
       <section
         title="project page"
         id="project"
-        className="min-h-screen flex items-center justify-center py-20"
+        className="min-h-screen relative flex items-center justify-center py-20"
       >
         <Revalscroll>
           <div className="max-w-7xl w-full mx-auto px-4">

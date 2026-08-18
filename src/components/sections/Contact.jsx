@@ -31,7 +31,7 @@ export const Contact = () => {
       <section
         title="contact developer "
         id="contact"
-        className="h-screen max-w-7xl overflow-x-hidden  mx-auto w-full flex items-center justify-center py-0 "
+        className="h-screen relative max-w-7xl overflow-x-hidden  mx-auto w-full flex items-center justify-center py-0 "
       >
         <Revalscroll>
           <div className="">
