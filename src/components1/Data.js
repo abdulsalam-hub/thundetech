@@ -9,7 +9,7 @@ export const projects = [{
     tech: [
         "SEO", "TYPESCRIPT", " TAILWINDCSS", "MOTION", "emailJS"
     ],
-    live: "https://as-salam-seven.vercel.app/",
+    live: "https://salam-consult.vercel.app",
     github: "https://github.com/abdulsalam-hub/as-salam"
 }, {
     title: "e-commerce site",
@@ -17,7 +17,7 @@ export const projects = [{
     solution: "optimized UI with lazy loading, cart sum functionality",
     impact: " total number items in cart, reduced load time ",
     tech: ["REACT", "TAILWINDCSS", "REDUX"],
-    live: "https://folly-two.vercel.app/",
+    live: "https://follymarket.vercel.app",
     github: "https://github.com/abdulsalam-hub/folly"
 }, {
     title: "task  management (focus)",
@@ -25,7 +25,7 @@ export const projects = [{
     solution: "task manager with priority & due date",
     impact: " total number items in cart, reduced load time ",
     tech: ["react", "storage API "],
-    live: "https://task-log-ten.vercel.app/",
+    live: "https://tasklog-place.vercel.app",
     github: "https://github.com/abdulsalam-hub/task-log"
 }, {
     title: "uber landing page (sample) ",
@@ -33,8 +33,8 @@ export const projects = [{
     solution: "design and build the UI to highly performance and SEO optimized",
     impact: "beautified,call to action and simple.",
     tech: ["react", "typeScript", " tailwind", ],
-    live: "https://abdulsalam-hub-novaride.vercel.app",
-    github: "https://github.com/abdulsalam-hub/novaride"
+    live: "https://go-ridenova.vercel.app",
+    github: "https://github.com/abdulsalam-hub/rideNova"
 }, {
     title: "port-folio website",
     problem: " unable to display service project sample to clients ",
@@ -42,15 +42,15 @@ export const projects = [{
     impact: " display projects and direct codeStream.",
     tech: ["react", " tailwind", "animations "],
     live: "#",
-    github: "https://github.com/abdulsalam-hub/portfolio"
+    github: "https://github.com/abdulsalam-hub/thundetech"
 }, {
     title: "react jobs UI(sample) ",
     problem: "none available",
     solution: "loading ...",
     impact: " build a simple centralized react job only.(yet to be upgraded)",
     tech: ["REACT", "API", " TAILWINDCSS", ],
-    live: "#",
-    github: "https://github.com/abdulsalam-hub/swiftjobs"
+    live: "https://forbejobs.vercel.app",
+    github: "https://github.com/abdulsalam-hub/forbejobs"
 }, {
     title: "names of Allah ",
     problem: "none available",
@@ -65,6 +65,6 @@ export const projects = [{
     solution: "add translator ",
     impact: " integrate google-x API ",
     tech: ["REACT", "tailwind", " google-x-api"],
-    live: "https://syntra-brown.vercel.app/",
+    live: "https://syntratranslate.vercel.app",
     github: "https://github.com/abdulsalam-hub/syntra"
 }, ];
