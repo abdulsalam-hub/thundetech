@@ -174,3 +174,56 @@ img { display: block; max-width: 100%; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+
+/* Portfolio section refinements */
+#about, #service, #project, #contact { scroll-margin-top: 5.5rem; }
+#about > .reveal > div,
+#service > .reveal > div,
+#project > .reveal > div { width: min(100% - 2.25rem, 1180px); margin-inline: auto; }
+#about h2, #service h2, #project h2 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -.04em;
+}
+#about .glassphormism,
+#about [title="experience"],
+#about .glassphormism > div > div {
+  border-color: rgba(148,163,184,.14);
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, rgba(17,24,39,.72), rgba(10,15,27,.68));
+}
+#about [title="developer skills"] { gap: 1rem; }
+#about [title="developer skills"] > * {
+  border: 1px solid rgba(148,163,184,.12);
+  border-radius: 1rem;
+  padding: 1.15rem;
+  background: rgba(255,255,255,.018);
+}
+#service .grid-cols-1 { display: grid; }
+#service h3 { color: #bfdbfe; }
+#service article, #service .p-6 {
+  border-color: rgba(148,163,184,.14);
+  background: linear-gradient(145deg, rgba(17,24,39,.88), rgba(10,15,27,.78));
+  border-radius: 1.5rem;
+}
+#contact { min-height: auto; padding-block: clamp(5rem, 10vw, 8rem); }
+#contact form { width: 100%; }
+#contact input, #contact textarea { font-size: .95rem; }
+#contact input::placeholder, #contact textarea::placeholder { color: #64748b; }
+#contact button[type="submit"] {
+  min-height: 3.15rem;
+  border: 1px solid #60a5fa;
+  border-radius: 999px;
+  background: #3b82f6;
+  font-size: .925rem;
+  font-weight: 700;
+  transition: transform .2s ease, background .2s ease;
+}
+#contact button[type="submit"]:hover { transform: translateY(-2px); background: #2563eb; }
+@media (min-width: 768px) {
+  #service .grid-cols-1 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  #contact form { width: min(100%, 48rem); }
+}
+@media (min-width: 1200px) {
+  #service .grid-cols-1 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
