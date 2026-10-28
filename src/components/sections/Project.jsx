@@ -1,34 +1,28 @@
-import {useState} from "react";
+import { Revalscroll } from "../RevalScroll";
 import ProjectBox from "../../components1/ProjectBox";
-import {Revalscroll} from "../RevalScroll";
 
-export const Project=() =>
-{
-      const [curOpen,setCurOpen]=useState(null)
-  return (
-    <>
-      <section
-        title="project page"
-        id="project"
-        className="min-h-screen relative flex items-center justify-center py-20"
-      >
-        <Revalscroll>
-          <div className="max-w-7xl w-full mx-auto px-4">
-            <h2
-              title="devoloper first project"
-              className="text-3xl font-bold mb-10 bg-linear-to-r from-blue-700 to-gray-300 bg-clip-text text-transparent text-center"
-            >
-              Featured Projects
+export const Project = () => (
+  <section id="project" aria-labelledby="projects-heading" className="section-space relative scroll-mt-24">
+    <Revalscroll>
+      <div className="section-wrap">
+        <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div>
+            <p className="section-kicker mb-4">Selected work</p>
+            <h2 id="projects-heading" className="section-heading text-4xl font-semibold text-white sm:text-5xl">
+              Featured <span className="text-gradient">Projects</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-4">
-    <ProjectBox  curOpen={curOpen} setCurOpen={setCurOpen}/>
-              
-             
-            </div>
+            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
+              A closer look at the problems, solutions, tools, and thinking behind my work.
+            </p>
           </div>
-        </Revalscroll>
-      </section>
-    </>
-  );
-};
-
+          <a href="https://github.com/abdulsalam-hub" target="_blank" rel="noreferrer" className="cta-secondary w-fit">
+            More on GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <ProjectBox />
+        </div>
+      </div>
+    </Revalscroll>
+  </section>
+);
