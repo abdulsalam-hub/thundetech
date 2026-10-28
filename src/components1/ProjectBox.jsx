@@ -1,96 +1,39 @@
-import React from 'react'
-import {projects} from "./Data";
 import { useState } from "react";
-const ProjectBox=() =>
-{
-  
-    const [show,setShow]=useState(null)
-    function handleShow(id)
-    {
- setShow(id)
-  }
-  return (
-    <>
-          {
-              projects.map((project,id) =>
-              {
-             return (
-               <div
-                 key={id}
-                 className="p-6 rounded-xl border-2 border-white/10 hover:-translate-y-1 hover:border-blue-500/30 transition-all hover:shadow-[0_2px_8px_rgba(59,130,246,0.5)]"
-               >
-                 <h3 className="text-xl font-bold mb-2 uppercase text-white">
-                   {project.title}
-                 </h3>
-                 <div className="w-full transition-opacity transform-content duration-300 ease">
-                   {show === id && (
-                     <>
-                       <div className="py-2 capitalize first-letter:capitalize">
-                         <h2 className="font-bold">issue:</h2>
-                         <span>{project.problem}.</span>
-                       </div>
-                       <div className="first-letter:capitalize ">
-                         <h2 className=" font-bold capitalize">solution:</h2>
-                         <span>{project.solution}.</span>
-                       </div>
-                       <div className="py-2 first-letter:capitalize">
-                         <h2 className="font-bold">impact:</h2>
-                         <span>{project.impact}.</span>
-                       </div>
-                     </>
-                   )}
+import { projects } from "./Data";
 
-                   {show !== id && (
-                     <button
-                       onClick={() => handleShow(id)}
-                       type="button"
-                       className="rounded-xl p-1  hover:bg-blue-400  cursor-pointer text-blue-600 font-medium  w-15 capitalize transition-colors "
-                     >
-                       more
-                     </button>
-                   )}
-                 </div>
+const ProjectBox = () => {
+  const [show, setShow] = useState(null);
+  return projects.map((project, id) => (
+    <article key={project.title} className="surface-card group flex h-full flex-col rounded-[1.6rem] p-5 transition duration-300 hover:-translate-y-1 sm:p-6">
+      <div className="mb-5 flex items-center justify-between">
+        <span className="rounded-full border border-blue-300/15 bg-blue-500/[0.08] px-3 py-1 text-[10px] font-semibold uppercase tracking-[.16em] text-blue-200">Selected project</span>
+        <span className="font-mono text-xs text-slate-600">0{id + 1}</span>
+      </div>
+      <h3 className="font-display text-xl font-semibold leading-snug text-white sm:text-2xl">{project.title}</h3>
+      <div className="mt-4 flex-1 text-sm leading-6 text-slate-400">
+        {show === id ? (
+          <div className="space-y-3">
+            <p><strong className="text-slate-200">Issue:</strong> {project.problem}.</p>
+            <p><strong className="text-slate-200">Solution:</strong> {project.solution}.</p>
+            <p><strong className="text-slate-200">Impact:</strong> {project.impact}.</p>
+            <button onClick={() => setShow(null)} type="button" className="text-sm font-semibold text-blue-300 hover:text-white">Show less ↑</button>
+          </div>
+        ) : (
+          <div>
+            <p>{project.solution}</p>
+            <button onClick={() => setShow(id)} type="button" className="mt-3 text-sm font-semibold text-blue-300 hover:text-white">Explore the details <span aria-hidden="true">→</span></button>
+          </div>
+        )}
+      </div>
+      <div className="mt-5 flex flex-wrap gap-2">
+        {project.tech.map((tech) => <span key={tech} className="rounded-full border border-white/[0.08] bg-white/[0.035] px-3 py-1.5 text-xs text-slate-300">{tech.trim()}</span>)}
+      </div>
+      <div className="mt-6 flex flex-wrap gap-3 border-t border-white/[0.08] pt-5">
+        {project.live && project.live !== "#" && <a target="_blank" rel="noreferrer" href={project.live} className="cta-primary min-h-10 px-4 py-2 text-xs">Live demo <span aria-hidden="true">↗</span></a>}
+        <a target="_blank" rel="noreferrer" href={project.github} className="cta-secondary min-h-10 px-4 py-2 text-xs">Source code <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+  ));
+};
 
-                 {/* <p className="text-gray-300 mb-4">
-                   Beautiful innovative project ideas that caught attentions
-                   with designs scaling skills.
-                 </p> */}
-                 <div className="w-full flex gap-x-2 flex-wrap gap-y-2 h-fit max-h-auto  mt-3 items-center transition duration-500 ease-in-out">
-                   {project.tech.map((tech) => {
-                     return (
-                       <span
-                         key={tech}
-                         className="bg-blue-500/12 text-blue-400 py-1 px-3 rounded-full text-sm hover:bg-blue-300
-                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.5)] transition-transform hover:text-blue-900 cursor-default
-                    "
-                       >
-                         {tech}
-                       </span>
-                     );
-                   })}
-                 </div>
-                 <div className="flex justify-between items-center  mt-8 px-2">
-                   <a
-                     target="_self"
-                     href={project.live}
-                     className="text-blue-800 border rounded px-2 py-1.5 hover:text-gray-500  transition-colors"
-                   >
-                     live demo↗
-                   </a>
-                   <a
-                     target="_blank"
-                     href={project.github}
-                     className="text-blue-800 border rounded px-2 py-1.5 hover:text-gray-500  transition-colors"
-                   >
-                     github page↗
-                   </a>
-                 </div>
-               </div>
-             );
-         })     
-      }
-    </>
-  );
-}
-
-export default ProjectBox
+export default ProjectBox;
